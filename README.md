@@ -6,13 +6,13 @@ The pandemic has brought about lasting changes in our world, leaving the economy
 
 
 ## Data
-The main dataset used combines the 2020 Yelp dataset, Yelp API, and demographic data. 
+The primary dataset utilized is a combination of the 2020 Yelp dataset, the Yelp API, and demographic data.
 
-`yelp_academic_dataset_business_2020`: This is the base dataset and was obtained from [sdkramer10’s GitHub repository](https://github.com/sdkramer10/13fund-covid-analysis/blob/master/yelp_academic_dataset_business.json.zip) as Yelp does not officially offer the previous dataset. All the dataset we used is accessible under the data folder.
+`yelp_academic_dataset_business_2020`: This serves as the foundational dataset and was sourced from  [sdkramer10’s GitHub repository](https://github.com/sdkramer10/13fund-covid-analysis/blob/master/yelp_academic_dataset_business.json.zip) since Yelp does not officially provide the earlier dataset. All the datasets we utilized can be found in the data folder.
 
-`yelp_academic_dataset_business_2022`: Obtained from publicly available [Yelp API](https://docs.developer.yelp.com/docs) for services on Yelp. Registration for the API key is required and there is a daily limit to the number of callings that can be made with the key received. We used business_id from the 2020 data to call the current business details. Starting with 209,393 data points, I filtered it down to 56,936 rows by focusing on restaurants and their current 'is_open' status. I used the Yelp API to obtain the most up-to-date restaurant features, with 675 values indicating 'close' or 'open' status. 
+`yelp_academic_dataset_business_2022`: Acquired from the publicly available [Yelp API](https://docs.developer.yelp.com/docs) for Yelp services. Registration for an API key is mandatory, and there exists a daily limit on the number of calls that can be made using the obtained key. To retrieve current business details, we employed the business_id from the 2020 dataset. Starting with 209,393 data points, I refined it to 56,936 rows by focusing on restaurants and their current 'is_open' status. The Yelp API was utilized to procure the most recent restaurant attributes, encompassing 675 values indicating 'closed' or 'open' statuses.
 
-`outer_source_data.csv`: DemographicTo enhance our dataset, we added demographic data from the FBI and Census sources, resulting in a final dataset of 36,365 restaurants.
+`outer_source_data.csv`: Demographic data from the FBI and Census sources were incorporated to enrich our dataset, resulting in a final dataset comprising 36,365 restaurants.
 
 The full process of generating `df` used in the main `restaurant_closure_prediction.ipynb` file can be found on `df_creation.ipynb`.
 
